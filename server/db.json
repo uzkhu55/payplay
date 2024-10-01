@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$WiU/kdxUgK0ewit8unkvDuVR0CvQPrY7re2gz99LdTC446fZkVx0q",
+      "userId": "421f9a2b-98f0-4d55-b107-894bdb6d30f5",
+      "username": "Admin",
+      "birthday": "2024-10-01",
+      "balance": 0,
+      "ticket": 5,
+      "points": 98
+    }
+  ],
+  "magicword": {
+    "word": "thisisamagicword"
+  },
+  "questions": [
+    {
+      "id": "1f6c57da-cc91-4a6b-9e0d-c714bda1a3e2",
+      "question": "What is the capital of France?",
+      "answer": "Paris"
+    },
+    {
+      "id": "5a9c2f19-cc2d-4e75-b791-df2fbe22934a",
+      "question": "What is the largest planet in our solar system?",
+      "answer": "Jupiter"
+    },
+    {
+      "id": "849b7adf-c32a-4b95-bc1b-f8b017b0d2b2",
+      "question": "Who wrote 'Romeo and Juliet'?",
+      "answer": "a"
+    },
+    {
+      "id": "4eb93fd1-6249-4902-9841-5f1c3561bd99",
+      "question": "d",
+      "answer": "d"
+    },
+    {
+      "id": "77e36444-090f-4948-8a02-494e23ee608e",
+      "question": "e",
+      "answer": "e"
+    }
+  ]
+}
