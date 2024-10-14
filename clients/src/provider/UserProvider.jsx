@@ -29,6 +29,7 @@ export const AncestorProvider = ({ children }) => {
       setUsername("");
       throw new Error(error.response.data.message);
     }
+  };
 
   const logOutHandler = () => {
     window.localStorage.removeItem("token");
@@ -43,7 +44,7 @@ export const AncestorProvider = ({ children }) => {
 
     if (token) {
       setToken(token);
-      setUsername(storedUsername); // Set the username from localStorage
+      setUsername(storedUsername);
       setIsLoggedIn(true);
     } else {
       setToken("");

@@ -141,7 +141,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex flex-col items-center h-full bg-black text-white ">
+    <div className="flex flex-col  justify-center items-center h-[100%] bg-black text-white ">
       <h1 className="text-2xl font-bold">Profile</h1>
       <div className="mt-4 flex flex-col items-center justify-center">
         <h2 className="text-xl font-semibold">Profile Photo</h2>

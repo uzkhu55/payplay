@@ -26,5 +26,5 @@ export const signinController = async (req, res) => {
 
   await sql`INSERT INTO oorusers(userid, username, email, password, balance, createdat, birthday, ticket) VALUES(${userId}, ${username}, ${email}, ${hashedPassword}, ${balance}, ${new Date().toISOString()}, ${birthday}, ${ticket})`;
 
-  res.status(400).send("Бүртгэлтэй байна");
+  res.status(200).send("Амжилттай бүртгүүллээ");
 };
