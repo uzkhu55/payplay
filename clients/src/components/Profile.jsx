@@ -38,7 +38,7 @@ const Profile = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/birthday?birthday=${birthdaySearch}`,
+        `https://payplay-plhh.onrender.com/api/birthday?birthday=${birthdaySearch}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ const Profile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/change-password",
+        "https://payplay-plhh.onrender.com/api/change-password",
         {
           password,
           updatePassword,
@@ -92,7 +92,7 @@ const Profile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/updateBalance",
+        "https://payplay-plhh.onrender.com/api/updateBalance",
         {
           username: searchUsername,
           amount: chargeAmount,
@@ -119,7 +119,7 @@ const Profile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/addquestion",
+        "https://payplay-plhh.onrender.com/api/addquestion",
         { question: newQuestion, answer: newAnswer },
         {
           headers: {

@@ -1,21 +1,18 @@
-import fs from "fs/promises"; // Import from fs/promises
+import { sql } from "../../database/index.js"; // Import the SQL database connection
 
 export const Question = async (req, res) => {
   try {
-    // Read and parse the JSON file
-    const resultJSON = await fs.readFile("./db.json", "utf-8");
-    const result = JSON.parse(resultJSON);
+    // Fetch questions from the database
+    const questions = await sql`SELECT * FROM questions`;
 
-    // Check if the questions array exists and has elements
-    const questions = result.questions || [];
-
+    // Check if there are any questions
     if (questions.length === 0) {
       return res.status(404).send({ message: "No questions found." });
     }
 
     res.send({ questions });
   } catch (error) {
-    console.error("Error reading the JSON file:", error);
+    console.error("Error retrieving questions from the database:", error);
     res.status(500).send({ message: "Internal server error" });
   }
 };

@@ -15,9 +15,12 @@ const Magicheader = () => {
       const token = localStorage.getItem("token");
 
       try {
-        const response = await axios("http://localhost:8000/api/ticket", {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        const response = await axios(
+          "https://payplay-plhh.onrender.com/api/ticket",
+          {
+            headers: { Authorization: `Bearer ${token}` },
+          }
+        );
 
         setTicket(response.data.ticket);
       } catch (error) {

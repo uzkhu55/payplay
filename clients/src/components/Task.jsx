@@ -34,9 +34,12 @@ export const Task = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await axios("http://localhost:8000/api/question", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      const response = await axios(
+        "https://payplay-plhh.onrender.com/api/question",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
 
       const questions = response.data.questions;
       if (questions && questions.length > 0) {
@@ -67,7 +70,7 @@ export const Task = () => {
   const updateUserPoints = async (earnedPoints) => {
     try {
       await axios.post(
-        `http://localhost:8000/api/user/points`,
+        `https://payplay-plhh.onrender.com/api/user/points`,
         {
           points: earnedPoints,
         },

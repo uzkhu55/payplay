@@ -44,7 +44,7 @@ const Magicword = () => {
 
     try {
       await axios.post(
-        "http://localhost:8000/api/updateTicket",
+        "https://payplay-plhh.onrender.com/api/updateTicket",
         { tickets },
         { headers: { Authorization: `Bearer ${token}` } }
       );

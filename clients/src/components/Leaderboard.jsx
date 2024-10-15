@@ -11,7 +11,7 @@ export const Leaderboard = () => {
     const fetchLeaderboard = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/leaderboard"
+          "https://payplay-plhh.onrender.com/api/leaderboard"
         );
         setLeaderboard(response.data);
       } catch (err) {

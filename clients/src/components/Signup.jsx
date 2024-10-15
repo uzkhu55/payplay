@@ -39,7 +39,7 @@ export const Signup = () => {
   const checkUsernameExists = async (username) => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/user?username=${username}`
+        `https://payplay-plhh.onrender.com/api/user?username=${username}`
       );
       return response.data.length > 0; // Assuming the response is an array of matching users
     } catch (error) {
@@ -78,7 +78,7 @@ export const Signup = () => {
     }
 
     try {
-      await axios.post("http://localhost:8000/api/user/signup", {
+      await axios.post("https://payplay-plhh.onrender.com/api/user/signup", {
         email,
         password,
         username,

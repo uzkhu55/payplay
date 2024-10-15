@@ -23,9 +23,12 @@ export const Cash = ({ jump }) => {
   const continueHandler = async () => {
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:8000/api/user/mail", {
-        mungu: check,
-      });
+      const res = await axios.post(
+        "https://payplay-plhh.onrender.com/api/user/mail",
+        {
+          mungu: check,
+        }
+      );
 
       console.log(res);
 

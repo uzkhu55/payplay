@@ -25,7 +25,7 @@ const Payment = ({ jump }) => {
   const continueHandler = async () => {
     try {
       // setLoading(true);
-      await axios.post("http://localhost:8000/api/user/confirm", {
+      await axios.post("https://payplay-plhh.onrender.com/api/user/confirm", {
         currency: currency,
         userId: uuidv4(),
       });

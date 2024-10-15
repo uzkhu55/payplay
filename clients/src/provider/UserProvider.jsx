@@ -14,10 +14,13 @@ export const AncestorProvider = ({ children }) => {
 
   const loginHandler = async (email, password) => {
     try {
-      const result = await axios.post("http://localhost:8000/api/user/login", {
-        email,
-        password,
-      });
+      const result = await axios.post(
+        "https://payplay-plhh.onrender.com/api/user/login",
+        {
+          email,
+          password,
+        }
+      );
 
       window.localStorage.setItem("token", result.data.token);
       window.localStorage.setItem("username", result.data.username);
