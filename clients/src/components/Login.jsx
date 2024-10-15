@@ -7,7 +7,6 @@ import { Inputfor } from "./Inputfor";
 import Errorcomp from "./Errorcomp";
 import { useUser } from "@/provider/UserProvider";
 import { useRouter } from "next/navigation";
-import { Loading } from "./Loading";
 
 export const Login = () => {
   const { loginHandler, isLoggedIn } = useUser();
