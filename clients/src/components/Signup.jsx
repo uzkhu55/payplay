@@ -36,18 +36,6 @@ export const Signup = () => {
     event.preventDefault();
   };
 
-  const checkUsernameExists = async (username) => {
-    try {
-      const response = await axios.get(
-        `https://payplay-plhh.onrender.com/api/user?username=${username}`
-      );
-      return response.data.length > 0; // Assuming the response is an array of matching users
-    } catch (error) {
-      console.error("Error checking username:", error);
-      return false; // Assume username does not exist if there's an error
-    }
-  };
-
   const logInputValue = async () => {
     const { email, username, password, RepeatPassword, birthday } = inputValue;
 
@@ -68,12 +56,6 @@ export const Signup = () => {
 
     if (password !== RepeatPassword) {
       setError("Passwords do not match");
-      return;
-    }
-
-    const usernameExists = await checkUsernameExists(username);
-    if (usernameExists) {
-      setError("Username already exists.");
       return;
     }
 
